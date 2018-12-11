@@ -1,0 +1,14 @@
+{
+  "name": "trywebpack",
+  "version": "1.0.0",
+  "description": "try webpack node_module.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "skxeve",
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^4.27.1"
+  }
+}
