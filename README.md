@@ -127,10 +127,27 @@ $ export PATH=$PATH:./node_modules/.bin
 ```
 
 webpack設定ファイル作成、ディレクトリ作成、ファイル作成
+
 ```
 $ vim webpack.config.js
 $ mkdir -p src/js/modules public/js
 $ vim src/js/app.js
 $ vim src/js/modules/addition-calculator.js
 $ vim src/js/modules/tax-calculator.js
+```
+
+webpack実行
+
+```
+$ webpack
+Hash: 06ee545dbfc5ad1a76c4
+Version: webpack 4.27.1
+Time: 110ms
+Built at: 2018/12/12 22:13:07
+    Asset      Size  Chunks             Chunk Names
+bundle.js  5.83 KiB    main  [emitted]  main
+Entrypoint main = bundle.js
+[./src/js/app.js] 325 bytes {main} [built]
+[./src/js/modules/addition-calculator.js] 93 bytes {main} [built]
+[./src/js/modules/tax-calculator.js] 88 bytes {main} [built]
 ```
