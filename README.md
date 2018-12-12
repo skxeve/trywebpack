@@ -120,3 +120,17 @@ added 58 packages from 15 contributors and audited 4263 packages in 11.009s
 found 0 vulnerabilities
 ```
 
+一応PATH通し
+
+```
+$ export PATH=$PATH:./node_modules/.bin
+```
+
+webpack設定ファイル作成、ディレクトリ作成、ファイル作成
+```
+$ vim webpack.config.js
+$ mkdir -p src/js/modules public/js
+$ vim src/js/app.js
+$ vim src/js/modules/addition-calculator.js
+$ vim src/js/modules/tax-calculator.js
+```
