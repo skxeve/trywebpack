@@ -151,3 +151,10 @@ Entrypoint main = bundle.js
 [./src/js/modules/addition-calculator.js] 93 bytes {main} [built]
 [./src/js/modules/tax-calculator.js] 88 bytes {main} [built]
 ```
+
+動作確認用HTML作成
+```
+$ vim public/index.html
+```
+
+[結果確認](https://skxeve.github.io/trywebpack/public/)
