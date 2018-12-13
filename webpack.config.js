@@ -13,5 +13,34 @@ module.exports = {
     filename: 'bundle.js',
     // 出力先のパス（v2系以降は絶対パスを指定する必要がある）
     path: path.join(__dirname, 'public/js')
+  },
+  // ローダー（module）の設定
+  module: {
+    rules: [
+      {
+        // ローダーの処理対象ファイル（拡張子js）
+        test: /\.js$/,
+        // ローダーの処理対象から外すディレクトリ
+        exclude: /node_modules/,
+        use: [
+          {
+            // 利用するローダー
+            loader: 'babel-loader',
+            // ローダーのオプション
+            // 今回はbabel-loaderを利用しているため、babelのオプションを指定している
+            options: {
+              presets: [
+                [
+                  'env',
+                  {
+                    modules: false
+                  }
+                ]
+              ]
+            }
+          }
+        ]
+      }
+    ]
   }
 };

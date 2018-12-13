@@ -290,3 +290,50 @@ found 0 vulnerabilities
    ╰───────────────────────────────────────────────────────────────╯
 
 ```
+
+
+babel設定をwebpack.config.jsに追記してwebpack実行
+するとエラーが
+
+```
+$ webpack
+Hash: 73dcaac5c9ed16ffa921
+Version: webpack 4.27.1
+Time: 89ms
+Built at: 2018/12/13 22:47:46
+    Asset      Size  Chunks             Chunk Names
+bundle.js  6.83 KiB    main  [emitted]  main
+Entrypoint main = bundle.js
+[./src/js/app.js] 3.03 KiB {main} [built] [failed] [1 error]
+
+ERROR in ./src/js/app.js
+Module build failed (from ./node_modules/babel-loader/lib/index.js):
+Error: Cannot find module '@babel/core'
+ babel-loader@8 requires Babel 7.x (the package '@babel/core'). If you'd like to use Babel 6.x ('babel-core'), you should install 'babel-loader@7'.
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:587:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:513:25)
+    at Module.require (internal/modules/cjs/loader.js:643:17)
+    at require (/Users/shuhei/git/github.com/skxeve/tryWebpack/node_modules/v8-compile-cache/v8-compile-cache.js:159:20)
+    at Object.<anonymous> (/Users/shuhei/git/github.com/skxeve/tryWebpack/node_modules/babel-loader/lib/index.js:10:11)
+    at Module._compile (/Users/shuhei/git/github.com/skxeve/tryWebpack/node_modules/v8-compile-cache/v8-compile-cache.js:178:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:718:10)
+    at Module.load (internal/modules/cjs/loader.js:605:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:544:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:536:3)
+    at Module.require (internal/modules/cjs/loader.js:643:17)
+    at require (/Users/shuhei/git/github.com/skxeve/tryWebpack/node_modules/v8-compile-cache/v8-compile-cache.js:159:20)
+    at loadLoader (/Users/shuhei/git/github.com/skxeve/tryWebpack/node_modules/loader-runner/lib/loadLoader.js:13:17)
+    at iteratePitchingLoaders (/Users/shuhei/git/github.com/skxeve/tryWebpack/node_modules/loader-runner/lib/LoaderRunner.js:169:2)
+    at runLoaders (/Users/shuhei/git/github.com/skxeve/tryWebpack/node_modules/loader-runner/lib/LoaderRunner.js:362:2)
+    at NormalModule.doBuild (/Users/shuhei/git/github.com/skxeve/tryWebpack/node_modules/webpack/lib/NormalModule.js:280:3)
+    at NormalModule.build (/Users/shuhei/git/github.com/skxeve/tryWebpack/node_modules/webpack/lib/NormalModule.js:427:15)
+    at Compilation.buildModule (/Users/shuhei/git/github.com/skxeve/tryWebpack/node_modules/webpack/lib/Compilation.js:633:10)
+    at moduleFactory.create (/Users/shuhei/git/github.com/skxeve/tryWebpack/node_modules/webpack/lib/Compilation.js:1019:12)
+    at factory (/Users/shuhei/git/github.com/skxeve/tryWebpack/node_modules/webpack/lib/NormalModuleFactory.js:405:6)
+    at hooks.afterResolve.callAsync (/Users/shuhei/git/github.com/skxeve/tryWebpack/node_modules/webpack/lib/NormalModuleFactory.js:155:13)
+    at AsyncSeriesWaterfallHook.eval [as callAsync] (eval at create (/Users/shuhei/git/github.com/skxeve/tryWebpack/node_modules/tapable/lib/HookCodeFactory.js:32:10), <anonymous>:6:1)
+    at AsyncSeriesWaterfallHook.lazyCompileHook (/Users/shuhei/git/github.com/skxeve/tryWebpack/node_modules/tapable/lib/Hook.js:154:20)
+    at resolver (/Users/shuhei/git/github.com/skxeve/tryWebpack/node_modules/webpack/lib/NormalModuleFactory.js:138:29)
+    at process.nextTick (/Users/shuhei/git/github.com/skxeve/tryWebpack/node_modules/webpack/lib/NormalModuleFactory.js:342:9)
+    at process.internalTickCallback (internal/process/next_tick.js:70:11)
+```
