@@ -1,0 +1,17 @@
+{
+  // eslintのおすすめ設定
+  "extends": "eslint:recommended",
+  "parserOptions": {
+    // ES2016 以降の構文を有効にする
+    "ecmaVersion": 6,
+    // コードをモジュールとして扱う
+    "sourceType": "module"
+  },
+  "env": {
+    // ブラウザのグローバル変数を有効にする(alert,document,consoleなど)
+    "browser": true
+  },
+  rules: {
+    "no-console": "warn"
+  }
+}

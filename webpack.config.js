@@ -40,6 +40,14 @@ module.exports = {
             }
           }
         ]
+      },
+      {
+        // enforce: 'pre'を指定することによって付いてないローダーより早く処理される
+        // babel-loaderで変換する前にコードを検証したい
+        enforce: 'pre',
+        test: /\.js$/,
+        exclude: /node_modules/,
+        loader: 'eslint-loader'
       }
     ]
   }
