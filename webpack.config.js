@@ -22,24 +22,18 @@ module.exports = {
         test: /\.js$/,
         // ローダーの処理対象から外すディレクトリ
         exclude: /node_modules/,
-        use: [
-          {
-            // 利用するローダー
-            loader: 'babel-loader',
-            // ローダーのオプション
-            // 今回はbabel-loaderを利用しているため、babelのオプションを指定している
-            options: {
-              presets: [
-                [
-                  'env',
-                  {
-                    modules: false
-                  }
-                ]
-              ]
-            }
-          }
-        ]
+        // 利用するローダー
+        loader: 'babel-loader',
+        // ローダーのオプション
+        // 今回はbabel-loaderを利用しているため、babelのオプションを指定している
+        options: {
+          presets: [
+            [
+              'env',
+              { modules: false }
+            ]
+          ]
+        }
       },
       {
         // enforce: 'pre'を指定することによって付いてないローダーより早く処理される
