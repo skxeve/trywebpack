@@ -8,3 +8,4 @@ var tax = 1.08;
 var priceIncludeTax = taxCalculator(totalPrice, tax);
 
 console.log(priceIncludeTax);
+$('body').html(priceIncludeTax);

@@ -9,9 +9,12 @@
   },
   "env": {
     // ブラウザのグローバル変数を有効にする(alert,document,consoleなど)
-    "browser": true
+    "browser": true,
+    // jQueryのグローバル変数$を有効にする
+    "jquery": true
   },
   rules: {
+    // no-consoleルールに引っかかった場合、エラーでなく警告にする
     "no-console": "warn"
   }
 }
