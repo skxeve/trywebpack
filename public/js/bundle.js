@@ -94,7 +94,20 @@
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_addition_calculator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/addition-calculator */ \"./src/js/modules/addition-calculator.js\");\n/* harmony import */ var _modules_tax_calculator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/tax-calculator */ \"./src/js/modules/tax-calculator.js\");\n\n\n\nvar item1Price = 400;\nvar item2Price = 600;\nvar totalPrice = Object(_modules_addition_calculator__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(item1Price, item2Price);\nvar tax = 1.08;\nvar priceIncludeTax = Object(_modules_tax_calculator__WEBPACK_IMPORTED_MODULE_1__[\"default\"])(totalPrice, tax);\n\nconsole.log(priceIncludeTax);\n$('body').html(priceIncludeTax);\n\n//# sourceURL=webpack:///./src/js/app.js?");
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _modules_addition_calculator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/addition-calculator */ "./src/js/modules/addition-calculator.js");
+/* harmony import */ var _modules_tax_calculator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/tax-calculator */ "./src/js/modules/tax-calculator.js");
+
+
+
+var item1Price = 400;
+var item2Price = 600;
+var totalPrice = Object(_modules_addition_calculator__WEBPACK_IMPORTED_MODULE_0__["default"])(item1Price, item2Price);
+var tax = 1.08;
+var priceIncludeTax = Object(_modules_tax_calculator__WEBPACK_IMPORTED_MODULE_1__["default"])(totalPrice, tax);
+
+console.log(priceIncludeTax);
+$('body').html(priceIncludeTax);
 
 /***/ }),
 
@@ -106,7 +119,11 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _mod
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return additionCalculator; });\nfunction additionCalculator(number1, number2) {\n  return number1 + number2;\n}\n\n//# sourceURL=webpack:///./src/js/modules/addition-calculator.js?");
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return additionCalculator; });
+function additionCalculator(number1, number2) {
+  return number1 + number2;
+}
 
 /***/ }),
 
@@ -118,8 +135,13 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return taxCalculator; });\nfunction taxCalculator(price, tax) {\n  return Math.round(price * tax);\n}\n\n//# sourceURL=webpack:///./src/js/modules/tax-calculator.js?");
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return taxCalculator; });
+function taxCalculator(price, tax) {
+  return Math.round(price * tax);
+}
 
 /***/ })
 
 /******/ });
+//# sourceMappingURL=bundle.js.map

@@ -14,7 +14,7 @@
     "jquery": true
   },
   rules: {
-    // no-consoleルールに引っかかった場合、エラーでなく警告にする
-    "no-console": "warn"
+    // no-consoleルールを無視する(off or warn or error)
+    "no-console": "off"
   }
 }
